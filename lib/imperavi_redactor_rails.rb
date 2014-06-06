@@ -1,0 +1,2 @@
+require "imperavi_redactor_rails/engine"
+require "imperavi_redactor_rails/carrierwave_string_io"
