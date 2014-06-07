@@ -11,7 +11,7 @@ class RedactorImagesController < ApplicationController
     @redactor_image = RedactorImage.new(image: params[:file])
     
     if @redactor_image.save
-      render text: "{\"filelink\":\"#{@redactor_image.image.url(:normal)}\"}"
+      render text: "{\"filelink\":\"#{@redactor_image.image.url}\"}"
     else
       render json: @redactor_image.errors
     end
