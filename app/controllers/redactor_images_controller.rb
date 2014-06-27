@@ -3,7 +3,7 @@ class RedactorImagesController < ApplicationController
   respond_to :json 
 
   def index
-    @redactor_images = RedactorImage.limit(25)
+    @redactor_images = RedactorImage.limit(30).reverse_order
     render json: @redactor_images.map { |image| { 'thumb' => image.image.url(:normal), 'image' => image.image.url } }
   end
 
