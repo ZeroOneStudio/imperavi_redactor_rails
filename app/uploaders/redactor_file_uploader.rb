@@ -14,6 +14,6 @@ class RedactorFileUploader < CarrierWave::Uploader::Base
   end
   
   def extension_white_list
-    %w(doc docx pdf)
+    %w(doc docx pdf xls xlsx zip rar)
   end
 end
